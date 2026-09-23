@@ -1,0 +1,369 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0b;
+    color: white;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar h2 {
+    color: #ef4444;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ef4444;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    gap: 60px;
+}
+
+.content {
+    flex: 1;
+}
+
+.tag {
+    color: #ef4444;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #cbd5e1;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.image img {
+    width: 380px;
+    border-radius: 20px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #ef4444;
+    color: white;
+    padding: 15px 35px;
+    border-radius: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #dc2626;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 20px 8% 80px;
+}
+
+.box {
+    background: #181818;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+    border: 1px solid #ef4444;
+}
+
+.box h2 {
+    color: #ef4444;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   PROGRAMS
+========================= */
+
+.programs {
+    padding: 80px 8%;
+}
+
+.programs h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    text-align: center;
+    color: #9ca3af;
+    margin-bottom: 45px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #181818;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(239, 68, 68, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 20px 20px 10px;
+    color: #fff;
+}
+
+.card p {
+    padding: 0 20px 25px;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* =========================
+   TRAINERS
+========================= */
+
+.trainers {
+    padding: 80px 8%;
+    background: #111;
+}
+
+.trainers h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 40px;
+}
+
+.trainer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.trainer {
+    text-align: center;
+}
+
+.trainer img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    transition: 0.4s;
+}
+
+.trainer img:hover {
+    transform: scale(1.05);
+}
+
+/* Fix third trainer image */
+
+.trainer:nth-child(3) img {
+    object-position: center top;
+}
+
+.trainer p {
+    color: #ef4444;
+}
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+.cta {
+    text-align: center;
+    padding: 80px 8%;
+}
+
+.cta h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #111;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer h3 {
+    color: #ef4444;
+    margin-bottom: 15px;
+}
+
+.copy {
+    color: #777;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .image img {
+        width: 100%;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+.contact{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.contact h2{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.contact-sub{
+    color:#9ca3af;
+    margin-bottom:40px;
+}
+
+.contact-form{
+    max-width:650px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:16px;
+    border:none;
+    border-radius:12px;
+    background:#181818;
+    color:white;
+    font-size:16px;
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border:1px solid #ef4444;
+}
+
+.contact-form button{
+    border:none;
+    cursor:pointer;
+}
